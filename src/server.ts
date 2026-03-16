@@ -37,9 +37,9 @@ app.post('/tasks', async (req, res) => {
   }
 
   // To check if title is empty or just a whitespace
-  // if (title.trim().length === 0) {
-  //     return res.status(400).json({ message: 'Title cannot be empty' });
-  // }
+   if (title.trim().length === 0) {
+       return res.status(400).json({ message: 'Title cannot be empty' });
+   }
 
   try {
     const newTask = await taskStore.addTask(title);
