@@ -45,7 +45,7 @@ jobs:
         with:
           name: dist
           path: dist/
-           docker-smoke-test:
+          docker-smoke-test:
     # This job depends on the successful completion of the build-and-test job
     needs: build-and-test
     runs-on: ubuntu-latest
